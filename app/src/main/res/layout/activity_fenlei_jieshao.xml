@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.laji.tab.FenleiJieshaoActivity"
+    android:orientation="vertical"
+    android:background="@color/backgray">
+
+    <include layout="@layout/back_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/iv_fenlei"
+                    android:background="@drawable/kehui"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:id="@+id/tv_shuom"
+                    android:text="可回收物是指废纸张、废塑料、废玻璃制品、废金属、
+                    废织物等适宜回收、可循环利用的生活废弃物"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:id="@+id/tv_yaoqiiu"
+                android:layout_marginTop="20dp"
+                android:text="投放可回收物时，应尽量保持清洁干燥。避免污染。立体包
+                装应清空内容物。清洁后压扁投放。已破损，或有裹尖锐边角的，应包装后投放。"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

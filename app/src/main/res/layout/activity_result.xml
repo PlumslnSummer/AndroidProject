@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.laji.tab.ResultActivity"
+    android:orientation="vertical"
+    android:background="@color/backgray">
+
+    <include layout="@layout/back_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:background="@drawable/kehui"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="可回收物是指废纸张、废塑料、废玻璃制品
+                、废金属、废织物等适宜回收、可循环利用的生活废弃物"
+                android:layout_marginTop="10dp"/>
+            <com.example.compete6.util.MyGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4"
+                android:id="@+id/mygridview_laji"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="投放可回收物时，应尽量保持清洁干燥。避免污染。
+                立体包装应清空内容物。清洁后压扁投放。已破损，或有裹尖锐边角的，
+                应包装后投放"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

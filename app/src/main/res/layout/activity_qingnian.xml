@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.qingnian.QingnianActivity"
+    android:orientation="vertical"
+    android:background="@color/backgray">
+
+    <include layout="@layout/back_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/yizhan"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="隔窗望去海景，夜晚特别好看，市内清新风格的装修，
+                配备舒适的大床和床垫，相信您一定会舒舒服服的睡个好觉！
+                除此之外卧室还有空调、衣柜、挂墙液晶电视、免费百兆wifi、
+                以及独立的卫生间哦24小时热水是妥妥的！如果您想做饭，
+                厨房免费提供给您，快来大展厨艺吧！"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"/>
+            <com.example.compete6.util.MyGridView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:numColumns="3"
+                android:id="@+id/grid_erncai"/>
+            <com.example.compete6.util.MyListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mylistview_yizhan"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

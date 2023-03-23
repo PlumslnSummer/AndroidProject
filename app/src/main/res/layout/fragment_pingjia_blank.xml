@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.lvshi.tab.pager.PingjiaBlankFragment"
+    android:orientation="vertical"
+    android:background="@color/backgray">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+          <com.example.compete6.util.MyListView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/mylistview_pingjia"/>
+           <Button
+               android:layout_width="150dp"
+               android:layout_height="50dp"
+               android:text="免费咨询"
+               android:textSize="18sp"
+               android:textColor="@color/black"
+               android:background="@color/white"
+               android:id="@+id/btn_zixun"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_marginTop="20dp"/>
+       </LinearLayout>
+   </ScrollView>
+
+
+</LinearLayout>

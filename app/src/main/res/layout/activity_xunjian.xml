@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".make.tab.JiankangActivity"
+    android:orientation="vertical"
+    android:background="@color/backgray">
+
+    <include layout="@layout/back_layout"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:hint="老人餐饮服务记录"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:hint="服务人员评价"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

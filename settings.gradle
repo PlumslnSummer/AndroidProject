@@ -1,0 +1,7 @@
+include ':viewpager2-1.0.0'
+include ':MPAndroidChart-v3.1.0'
+include ':glide-4.10.0'
+include ':gifdecoder-4.10.0'
+include ':banner-1.4.10'
+include ':app'
+rootProject.name = "Compete6"

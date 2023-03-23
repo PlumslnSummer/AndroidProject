@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.lvshi.LvshiActivity"
+    android:orientation="vertical"
+    android:background="@color/backgray">
+
+    <include layout="@layout/back_layout"/>
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"/>
+    <com.youth.banner.Banner
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/banner_lvshi"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.example.compete6.util.MyGridView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:id="@+id/mygridview_zc"
+                android:numColumns="4"
+                android:background="@drawable/border_radius"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_zixun"
+                android:orientation="vertical">
+                <include layout="@layout/home_theme"/>
+            </LinearLayout>
+            <com.example.compete6.util.MyListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mylistview_lvshi"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="查看更多"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/tv_checkmore"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
