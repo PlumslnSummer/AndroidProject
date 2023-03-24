@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-rc01.aar/4f0743b5769b1b6bc9326e4a94a45235/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-rc01.aar/4f0743b5769b1b6bc9326e4a94a45235/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0-rc01.aar/4f0743b5769b1b6bc9326e4a94a45235/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.0.0-rc01/ee0e94505332ad6d0c76e592d3f27ca96e604cb7/lifecycle-viewmodel-2.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

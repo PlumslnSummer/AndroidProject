@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-rc01.aar/b8f98cb3ab577741c0b1ab68571c2ed7/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-rc01.aar/b8f98cb3ab577741c0b1ab68571c2ed7/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0-rc01.aar/b8f98cb3ab577741c0b1ab68571c2ed7/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.0.0-rc01/f18afc55b51d2ee611bc8501e98cd8c11b566f6d/lifecycle-livedata-core-2.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

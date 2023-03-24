@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/logo"-->
+<!--                android:id="@+id/iv_Tianjinlogo"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tv_groupname"-->
+<!--                android:layout_below="@id/iv_Tianjinlogo"-->
+<!--                android:textSize="50sp"-->
+<!--                android:text="队名：你请不动的电表队"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="10dp"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tv_name"-->
+<!--                android:layout_below="@id/tv_groupname"-->
+<!--                android:text="成员：李明灿 李萍伟 祖文印"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="30sp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_margin="10dp"/>-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="进入主页"
+                android:id="@+id/btn_getinto"
+
+                android:textSize="30sp"
+                android:layout_margin="10dp"
+                android:background="@color/white"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

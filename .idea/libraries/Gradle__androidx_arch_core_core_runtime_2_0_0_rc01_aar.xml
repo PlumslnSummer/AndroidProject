@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.arch.core:core-runtime:2.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/core-runtime-2.0.0-rc01.aar/0f43c37550e6ddbc1b5cffee4c0297f0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/core-runtime-2.0.0-rc01.aar/0f43c37550e6ddbc1b5cffee4c0297f0/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/core-runtime-2.0.0-rc01.aar/0f43c37550e6ddbc1b5cffee4c0297f0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.0.0-rc01/e115f455e439a6e07f57913084f0e54a41f3a4bc/core-runtime-2.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-rc01.aar/6d2c0cfe9a3f6fc659a20f17a4e207b1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-rc01.aar/6d2c0cfe9a3f6fc659a20f17a4e207b1/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0-rc01.aar/6d2c0cfe9a3f6fc659a20f17a4e207b1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.slidingpanelayout/slidingpanelayout/1.0.0-rc01/db4dfe0ad63715015472c7c2f2b1e43054fcac7a/slidingpanelayout-1.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

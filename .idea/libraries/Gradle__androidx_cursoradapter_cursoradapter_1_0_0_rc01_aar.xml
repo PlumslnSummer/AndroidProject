@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/cursoradapter-1.0.0-rc01.aar/26cc2b91186eaedfcc0a76d5f83d992c/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/cursoradapter-1.0.0-rc01.aar/26cc2b91186eaedfcc0a76d5f83d992c/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/cursoradapter-1.0.0-rc01.aar/26cc2b91186eaedfcc0a76d5f83d992c/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0-rc01/8fbe5c8e6903291374b1b3e3b61ecf1a5f7081cc/cursoradapter-1.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0-rc01@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-rc01.aar/da090b1f96bc4a51e7f8360b666e7b92/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-rc01.aar/da090b1f96bc4a51e7f8360b666e7b92/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-rc01.aar/da090b1f96bc4a51e7f8360b666e7b92/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0-rc01.aar/da090b1f96bc4a51e7f8360b666e7b92/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.swiperefreshlayout/swiperefreshlayout/1.0.0-rc01/f8d74aeb7cb603d49941a448939c200cd8e606b4/swiperefreshlayout-1.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <title>智能电表管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<!--header-->
+<div id="header">
+    <div>
+        <h1>智能电表管理</h1>
+    </div>
+</div>
+
+<!--main-->
+<div id="main">
+    <div class="content">
+        <div class="panel">
+            <div class="row">
+                <!--left-->
+                <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 panel-left">
+                    <h2>
+                        <img class="touxiang" src="images/user-default.png" alt="默认用户头像"/>
+                        <p style="font-size:20px">你请不动的电表队</p>
+                        <span class="nowrap" id="ConnectState">数据服务未启动！</span>
+                    </h2>
+                    <dl>
+                        <dd class="nowrap">月用电量：<strong id="elect">0 kWh</strong></dd>
+                        <dt></dt>
+                        <div class="btn-group" style="margin: 20px 0 0 20px;">
+                            <button type="button" id="control_select" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                                <span id="curMode">手动模式</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">自动模式</a></li>
+                            </ul>
+                        </div>
+                        <dd>电量阀值：</dd>
+                        <dd><input id="energyRange" class="form-control" value="500"></dd>
+                        <dd>功率阀值：</dd>
+                        <dd><input id="powerRange" class="form-control" value="3500"></dd>
+                        <dd>
+                            <button id="inputRange" class="btn btn-info btn-block">设置</button>
+                        </dd>
+                        <dt></dt>
+                        <dd>电表MAC：</dd>
+                        <dd><input id="ammeterMAC" type="text" class="form-control" value="01:12:4B:00:4C:F4:59:56">
+                        <dd>空调MAC：</dd>
+                        <dd><input id="socketMAC1" type="text" class="form-control" value="01:12:4B:00:1E:0C:BA:46">
+                        <dd>冰箱MAC：</dd>
+                        <dd><input id="socketMAC2" type="text" class="form-control" value="01:12:4B:00:EE:28:AE:BC">
+                        </dd>
+                        <dt></dt>
+
+
+
+                    </dl>
+                </div>
+
+                <!--right-->
+                <div class="col-xs-9 col-lg-9 col-sm-9 col-md-9 panel-right">
+                    <div class="row" style="margin-bottom: 30px;">
+                        <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                            <div class="powe-box">
+                                <!-- testHtml -->
+                                <div id="container" style="min-width: 310px; max-width: 380px; height: 208px; margin: 0 auto"></div>
+                                <div>用电量：<span id="quantity"></span></div>
+                                <div>用电功率：<span id="power"></span></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                            <div class="powe-box">
+                                <img id="socket-img1" class="socket-img" src="images/strip_off.png">
+                                <div>空调用电量：<span id="strip_quantity"></span></div>
+                                <div>空调用电功率：<span id="strip_power"></span></div>
+                                <button id="stripCtrl" class="btn btn-info">打开</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4">
+                            <div class="powe-box">
+                                <img id="socket-img2" class="socket-img" src="images/strip_off2.png">
+                                <div>冰箱用电量：<span id="strip_quantity2"></span></div>
+                                <div>冰箱用电功率：<span id="strip_power2"></span></div>
+                                <button id="stripCtrl2" class="btn btn-info">打开</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel p2">
+                                <div id="powerChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt20">
+                        <div class="col-xs-12">
+                            <div class="panel p2">
+                                <div id="energyChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_about">
+                        <div class="btn btn-primary myBtn"  onclick="display()">IDKey</div>
+                        <div class="btn btn-warning myBtn" onclick="share()">分享</div>
+                        <div class="btn btn-default myBtn" onclick="clearLocalstorage()">清除缓存</div>
+                        <div class="" id="qrDiv"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+
+<div id="eject-bg" class="eject-bg"></div>
+<div id="eject" class="eject">
+    <div class="eject-panel">
+        <div class="panel">
+            <div class="panel-body">
+                <h3 class="mb30">远程智能抄表系统</h3>
+                <form class="form-horizontal">
+                    <div class="form-group mt20 mb30">
+                        <label class="col-xs-3 control-label">I&nbsp;D：</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="ID" value="">
+                        </div>
+                    </div>
+                    <div class="form-group mt20 mb30">
+                        <label class="col-xs-3 control-label">KEY：</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="KEY" value="">
+                        </div>
+                    </div>
+                    <div class="form-group mt20 mb30">
+                        <label class="col-xs-3 control-label">SERVER：</label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="realTimeData" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <div class="btn btn-danger btn-block" id="inputID">确定</div>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <div class="btn btn-default btn-block" onclick="hide()">取消</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--充值窗口-->
+<!--模态框：下载二维码窗口-->
+<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center">
+                    <img class="download-qr" src="images/download.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模态框：确认退出-->
+<div class="modal  imgModal back-modal" id="backModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only"></span></button>
+                <h4 class="modal-title back-text">确定退出程序？</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="confirm_back" onclick="confirm_back()">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--延时弹出小框-->
+<div id="toast">
+	<span id="toast_txt">
+	</span>
+</div>
+<!--/延时弹出小框-->
+
+<!--引入jquery-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!--引入charts相关js-->
+<script src="js/charts/fusioncharts/fusioncharts.js"></script>
+<script src="js/charts/fusioncharts/fusioncharts.charts.js"></script>
+<script src="js/charts/fusioncharts/fusioncharts.widgets.js"></script>
+<script src="js/charts/fusioncharts/themes/fusioncharts.theme.fint.js"></script>
+<script src="js/charts/highchart/highcharts.js"></script>
+<script src="js/charts/highchart/highcharts-more.js"></script>
+
+<!--bootstrap js-->
+<script src="js/bootstrap.min.js"></script>
+
+<!--引入数据接口-->
+<script src="js/WSN/WSNHistory.js"></script>
+<script src="js/WSN/WSNRTConnect.js"></script>
+<!--qrcode：生成二维码js-->
+<script src="js/qrcode.js"></script>
+<!--引入主js-->
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/charts/highchart/power.js"></script>
+</body>
+</html>

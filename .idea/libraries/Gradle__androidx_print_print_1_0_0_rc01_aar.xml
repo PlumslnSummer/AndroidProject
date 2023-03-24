@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.print:print:1.0.0-rc01@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/print-1.0.0-rc01.aar/24bd706e087bb623c7d9db1e13f9e556/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/print-1.0.0-rc01.aar/24bd706e087bb623c7d9db1e13f9e556/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/print-1.0.0-rc01.aar/24bd706e087bb623c7d9db1e13f9e556/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/print-1.0.0-rc01.aar/24bd706e087bb623c7d9db1e13f9e556/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.print/print/1.0.0-rc01/27fc373e01001cdf54da0aa7a41c4bdfa6534e20/print-1.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

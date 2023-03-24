@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EnergyManagement</string>
+    <string name="hello_world">Hello world!</string>
+<string name="scan_text"> The two-dimensional code into the box, you can automatically scan.</string>
+</resources>

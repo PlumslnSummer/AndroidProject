@@ -1,0 +1,4 @@
+#Tue Mar 21 10:37:29 CST 2023
+base.0=G\:\\Android studio\\AndroidProject\\provincesExample\\LMC\\EnergyManagement-android\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

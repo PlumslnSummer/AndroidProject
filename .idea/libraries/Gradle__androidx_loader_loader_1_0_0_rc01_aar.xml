@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.loader:loader:1.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/loader-1.0.0-rc01.aar/8b3f110a182bb1273ad4dba0ee3219ba/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/loader-1.0.0-rc01.aar/8b3f110a182bb1273ad4dba0ee3219ba/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/loader-1.0.0-rc01.aar/8b3f110a182bb1273ad4dba0ee3219ba/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.loader/loader/1.0.0-rc01/8b0612c3b5dd4c5b775bcb18a6d673acbeb167ca/loader-1.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

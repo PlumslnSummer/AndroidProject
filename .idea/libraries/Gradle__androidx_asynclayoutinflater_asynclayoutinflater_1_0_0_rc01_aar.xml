@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0-rc01@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-rc01.aar/77b57fc30f1575fb8300ef59591cf168/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-rc01.aar/77b57fc30f1575fb8300ef59591cf168/res" />
+      <root url="file://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0-rc01.aar/77b57fc30f1575fb8300ef59591cf168/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../CRDC_UAV/crdc_device/device/single_UI/plaid/caches/modules-2/files-2.1/androidx.asynclayoutinflater/asynclayoutinflater/1.0.0-rc01/40ecbceb244edf2bbf035f483c71a02b2c1adae9/asynclayoutinflater-1.0.0-rc01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
