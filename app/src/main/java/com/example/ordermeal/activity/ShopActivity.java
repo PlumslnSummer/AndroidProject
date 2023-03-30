@@ -17,6 +17,7 @@ import com.example.ordermeal.adapter.ShopAdapter;
 import com.example.ordermeal.bean.ShopBean;
 import com.example.ordermeal.utils.Constant;
 import com.example.ordermeal.listview.ShopListView;
+import com.example.ordermeal.utils.HttpBinSerVices;
 import com.example.ordermeal.utils.JsonParse;
 
 import org.jetbrains.annotations.NotNull;
@@ -24,11 +25,16 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.util.List;
 
-import okhttp3.Call;
-import okhttp3.Callback;
+
+import retrofit2.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
+import okhttp3.ResponseBody;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ShopActivity extends AppCompatActivity {
 
@@ -38,13 +44,78 @@ public class ShopActivity extends AppCompatActivity {
     public static final int MSG_SHOP_OK=1;
     private MHandler mHandler;
     private RelativeLayout rl_title_bar;
+    private Retrofit retrofit;
+    private HttpBinSerVices httpBinSerVices;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
         mHandler=new MHandler();
-        initData();
+
+       // initData();
+        initData1();
         init();
+    }
+
+    /**
+     * 使用retrofit获取网络数据
+     * 1.Okhttp的优点
+     * 1.Okhttp所有的请求指向一个共同的socket
+     *
+     * 2.利用连接池减少延迟
+     *
+     * 3.支持Gzip压缩
+     *
+     * 4.通过缓存避免重复请求
+     *
+     * 2.Okhttp的缺点
+     * 1.消息回来需要切换到主线程，主线程需要自己写
+     * 2.调用比较复杂，需要自己进行封装。
+     *
+     * Retrofit
+     * 1.Retrofit的优点
+     * • 请求的方法参数注解都可以定制；
+     *
+     * • 支持同步、异步和RxJava；
+     *
+     * • 超级解耦；
+     *
+     * • 可以配置不同的反序列化工具来解析数据，如json、xml等；
+     *
+     * 2.Retrofit的缺点
+     * 不能接触序列化实体和响应数据；
+     *
+     * • 执行的机制太严格；
+     *
+     * • 使用转换器比较低效；
+     *
+     * • 只能支持简单自定义参数类型；
+     * retrofit  baseUrl()注意：只能传入以/结尾的网址
+     */
+    private void initData1() {
+        retrofit=new Retrofit.Builder().baseUrl(Constant.WEB_SITE)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        httpBinSerVices=retrofit.create(HttpBinSerVices.class);
+        Call<ResponseBody> call=httpBinSerVices.getSHopList(Constant.REQUEST_SHOP_URL);
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                try {
+                    String json=response.body().string().trim();
+                    List<ShopBean> shopBeanList=JsonParse.getInstance().getShopList(json);
+                    adapter.setData(shopBeanList);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable throwable) {
+
+            }
+        });
     }
 
     private void init() {
@@ -59,7 +130,7 @@ public class ShopActivity extends AppCompatActivity {
         adapter=new ShopAdapter(this);
         slv_list.setAdapter(adapter);
     }
-
+/*
     private void initData() {
         OkHttpClient okHttpClient=new OkHttpClient();
         Request request=new Request.Builder()
@@ -72,7 +143,7 @@ public class ShopActivity extends AppCompatActivity {
             }
 
             @Override
-            public  void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 String res=response.body().string();
                 Message msg=new Message();
                 msg.what=MSG_SHOP_OK;
@@ -80,7 +151,8 @@ public class ShopActivity extends AppCompatActivity {
                 mHandler.sendMessage(msg);
             }
         });
-    }
+    }*/
+
 
     class MHandler extends Handler{
         @Override

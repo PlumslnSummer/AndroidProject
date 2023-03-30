@@ -36,6 +36,16 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation files('libs\\glide-3.7.0.jar')
+    implementation files('libs\\retrofit-converters\\converter-gson-2.6.3.jar')
+    implementation files('libs\\retrofit-converters\\converter-jackson-2.6.3.jar')
+    implementation files('libs\\retrofit-converters\\converter-jaxb-2.6.3.jar')
+    implementation files('libs\\retrofit-converters\\converter-moshi-2.6.3.jar')
+    implementation files('libs\\retrofit-converters\\converter-protobuf-2.6.3.jar')
+    implementation files('libs\\retrofit-converters\\converter-simplexml-2.6.3.jar')
+    implementation files('libs\\retrofit-converters\\converter-wire-2.6.3.jar')
+    implementation files('libs\\retrofit-2.6.3.jar')
+    implementation files('libs\\retrofit-2.6.3-javadoc.jar')
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
