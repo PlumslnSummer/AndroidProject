@@ -92,6 +92,7 @@ public class ShopActivity extends AppCompatActivity {
      *
      * • 只能支持简单自定义参数类型；
      * retrofit  baseUrl()注意：只能传入以/结尾的网址
+     *
      */
     private void initData1() {
         retrofit=new Retrofit.Builder().baseUrl(Constant.WEB_SITE)
