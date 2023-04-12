@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         slist.add(R.drawable.login);
     }
 
+
     private Banner bannerLogin;
 
     @Override
