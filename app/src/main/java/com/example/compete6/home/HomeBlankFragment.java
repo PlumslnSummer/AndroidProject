@@ -87,7 +87,6 @@ public class HomeBlankFragment extends Fragment implements View.OnClickListener,
     private LinearLayout linearWuliu;
     private LinearLayout linearMetro;
     private LinearLayout linearCongwu;
-    private LinearLayout linearTheme;
     private LinearLayout linearAixin;
     private LinearLayout linearLvshi;
     private LinearLayout linearMoney;
@@ -296,15 +295,7 @@ public class HomeBlankFragment extends Fragment implements View.OnClickListener,
                 startActivity(intent);
             }
         });
-        linearTheme = (LinearLayout) rootview.findViewById(R.id.linear_theme);
-        linearTheme.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ThemeActivity.class);
-                intent.putExtra("token", mParam1);
-                startActivity(intent);
-            }
-        });
+
         linearMoreservices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

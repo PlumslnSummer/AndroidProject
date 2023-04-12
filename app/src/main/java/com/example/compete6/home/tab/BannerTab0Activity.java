@@ -1,7 +1,9 @@
 package com.example.compete6.home.tab;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,6 +39,7 @@ public class BannerTab0Activity extends AppCompatActivity {
     private HttpbinServices httpbinServices;
     private Integer id;
     private NewsDetailBean.DataBean dataBean;
+    private CharSequence charSequence=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +71,10 @@ public class BannerTab0Activity extends AppCompatActivity {
                             .load(Contants.WEB_URL+dataBean.getCover())
                             .error(R.mipmap.ic_launcher)
                             .into(ivNewsDe);
-                    tvNewsContent.setText(dataBean.getContent());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        charSequence= Html.fromHtml(dataBean.getContent(),Html.FROM_HTML_MODE_LEGACY);
+                    }
+                    tvNewsContent.setText(charSequence);
                     tvNewsLikenum.setText("点赞人数："+dataBean.getLikeNum());
                     tvNewsReadnum.setText("阅读人数："+dataBean.getReadNum());
                 } catch (IOException e) {

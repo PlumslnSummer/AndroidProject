@@ -1,18 +1,26 @@
 package com.example.compete6;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.example.compete6.bean.LoginBean;
 import com.example.compete6.bean.SuccessBean;
 import com.example.compete6.util.Contants;
 import com.example.compete6.util.HttpbinServices;
+import com.youth.banner.Banner;
+import com.youth.banner.loader.ImageLoader;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,12 +33,22 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etUserpwd;
     private Button btnLogin;
-    private Button btnIntohome;
     private Retrofit retrofit;
     private HttpbinServices httpbinServices;
     private String token;
     private Intent intent = null;
     private Button btnRegister;
+    private static List<Integer> slist = new ArrayList<>();
+
+    static {
+        slist.add(R.drawable.login1);
+        slist.add(R.drawable.login2);
+        slist.add(R.drawable.login3);
+        slist.add(R.drawable.login4);
+        slist.add(R.drawable.login);
+    }
+
+    private Banner bannerLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +58,21 @@ public class LoginActivity extends AppCompatActivity {
                 .baseUrl(Contants.WEB_URL).build();
         httpbinServices = retrofit.create(HttpbinServices.class);
         initView();
+        initBanner();
         initData();
+    }
+
+    private void initBanner() {
+        bannerLogin.setImages(slist);
+        bannerLogin.setImageLoader(new ImageLoader() {
+            @Override
+            public void displayImage(Context context, Object o, ImageView imageView) {
+                Glide.with(context)
+                        .load(o)
+                        .into(imageView);
+            }
+        });
+        bannerLogin.start();
     }
 
     private void initData() {
@@ -74,17 +106,11 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-        btnIntohome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent=new Intent(LoginActivity.this,RegisterActivity.class);
+                intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = (EditText) findViewById(R.id.et_username);
         etUserpwd = (EditText) findViewById(R.id.et_userpwd);
         btnLogin = (Button) findViewById(R.id.btn_login);
-        btnIntohome = (Button) findViewById(R.id.btn_intohome);
         btnRegister = findViewById(R.id.btn_register);
+        bannerLogin = findViewById(R.id.banner_login);
     }
 }
